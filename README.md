@@ -43,6 +43,11 @@ A comprehensive GUI and CLI application for managing AWS Systems Manager Paramet
 - **Command Line Interface**: Full CLI support with all authentication methods
 
 ## Screenshots
+<img width="1052" height="822" alt="AWS Authentication" src="https://github.com/user-attachments/assets/c74478e8-6f50-4b76-9d26-1a14690d6e72" />
+
+<img width="1052" height="825" alt="Upload Parameters" src="https://github.com/user-attachments/assets/253c46bf-8b10-414a-974e-abf99f56053f" />
+
+<img width="1051" height="822" alt="Visualize or Download Parameters" src="https://github.com/user-attachments/assets/e0bafb2d-1aad-4b34-ae74-90ef721f5b2a" />
 
 ### GUI Application
 *Screenshots will be added soon showing the main interface, authentication methods, and parameter management features.*

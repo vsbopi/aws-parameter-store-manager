@@ -502,7 +502,8 @@ Valid tiers: Standard, Advanced, Intelligent-Tiering"""
                         self.root.after(0, lambda: self.connection_status_var.set("Connection Failed"))
                         self.root.after(0, lambda: self.status_var.set("Failed to connect to AWS"))
                 except Exception as e:
-                    self.root.after(0, lambda: messagebox.showerror("Connection Error", f"Failed to connect: {str(e)}"))
+                    error_msg = str(e)
+                    self.root.after(0, lambda: messagebox.showerror("Connection Error", f"Failed to connect: {error_msg}"))
                     self.root.after(0, lambda: self.connection_status_var.set("Connection Failed"))
                     self.root.after(0, lambda: self.status_var.set("Ready"))
             
@@ -588,7 +589,8 @@ Valid tiers: Standard, Advanced, Intelligent-Tiering"""
                 self.root.after(0, lambda: self.status_var.set(f"Upload completed: {uploaded_count} uploaded, {skipped_count} skipped"))
                 
             except Exception as e:
-                self.root.after(0, lambda: messagebox.showerror("Upload Error", f"Error during upload: {str(e)}"))
+                error_msg = str(e)
+                self.root.after(0, lambda: messagebox.showerror("Upload Error", f"Error during upload: {error_msg}"))
                 self.root.after(0, lambda: self.status_var.set("Upload failed"))
         
         threading.Thread(target=upload_thread, daemon=True).start()
@@ -614,7 +616,8 @@ Valid tiers: Standard, Advanced, Intelligent-Tiering"""
                 self.root.after(0, lambda: self.status_var.set(f"Loaded {len(parameters)} parameters"))
                 
             except Exception as e:
-                self.root.after(0, lambda: messagebox.showerror("Refresh Error", f"Error refreshing parameters: {str(e)}"))
+                error_msg = str(e)
+                self.root.after(0, lambda: messagebox.showerror("Refresh Error", f"Error refreshing parameters: {error_msg}"))
                 self.root.after(0, lambda: self.status_var.set("Refresh failed"))
         
         threading.Thread(target=refresh_thread, daemon=True).start()
@@ -719,7 +722,8 @@ Valid tiers: Standard, Advanced, Intelligent-Tiering"""
                         else:
                             self.root.after(0, lambda: messagebox.showerror("Delete Error", f"Failed to delete parameter: {name}"))
                     except Exception as e:
-                        self.root.after(0, lambda: messagebox.showerror("Delete Error", f"Error deleting parameter: {str(e)}"))
+                        error_msg = str(e)
+                        self.root.after(0, lambda: messagebox.showerror("Delete Error", f"Error deleting parameter: {error_msg}"))
                 
                 threading.Thread(target=delete_thread, daemon=True).start()
     

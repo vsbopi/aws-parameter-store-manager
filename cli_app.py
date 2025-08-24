@@ -3,11 +3,12 @@
 Command Line Interface for AWS Parameter Store Manager
 """
 import argparse
-import sys
 import getpass
 import os
+import sys
+
 from aws_parameter_manager import AWSParameterManager
-from config import aws_config, AuthMethod
+from config import AuthMethod, aws_config
 
 
 def main():

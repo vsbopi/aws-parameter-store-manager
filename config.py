@@ -3,10 +3,12 @@ Configuration settings for AWS Parameter Store Manager
 """
 
 import os
-import boto3
-from typing import Optional, Dict, Any
 from enum import Enum
-from botocore.exceptions import ClientError, NoCredentialsError, ProfileNotFound
+from typing import Any, Dict, Optional
+
+import boto3
+from botocore.exceptions import (ClientError, NoCredentialsError,
+                                 ProfileNotFound)
 
 
 class AuthMethod(Enum):

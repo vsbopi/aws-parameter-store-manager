@@ -2,12 +2,13 @@
 GUI Application for AWS Parameter Store Manager
 """
 
-import tkinter as tk
-from tkinter import ttk, filedialog, messagebox, scrolledtext
 import threading
+import tkinter as tk
 from datetime import datetime
+from tkinter import filedialog, messagebox, scrolledtext, ttk
+
 from aws_parameter_manager import AWSParameterManager
-from config import aws_config, AuthMethod
+from config import AuthMethod, aws_config
 
 
 class ParameterStoreGUI:

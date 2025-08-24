@@ -6,14 +6,14 @@ This script demonstrates how to use the AWS Parameter Store Manager
 programmatically in your own Python applications.
 """
 
-import sys
 import os
+import sys
 
 # Add the parent directory to the path so we can import our modules
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from aws_parameter_manager import AWSParameterManager
-from config import aws_config, AuthMethod
+from config import AuthMethod, aws_config
 
 
 def example_access_key_auth():

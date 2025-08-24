@@ -9,8 +9,7 @@ from typing import Dict, List, Optional, Tuple
 
 import boto3
 import pandas as pd
-from botocore.exceptions import (ClientError, NoCredentialsError,
-                                 ProfileNotFound)
+from botocore.exceptions import ClientError, NoCredentialsError, ProfileNotFound
 
 from config import aws_config
 

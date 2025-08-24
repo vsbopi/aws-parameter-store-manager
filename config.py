@@ -7,8 +7,7 @@ from enum import Enum
 from typing import Any, Dict, Optional
 
 import boto3
-from botocore.exceptions import (ClientError, NoCredentialsError,
-                                 ProfileNotFound)
+from botocore.exceptions import ClientError, NoCredentialsError, ProfileNotFound
 
 
 class AuthMethod(Enum):
